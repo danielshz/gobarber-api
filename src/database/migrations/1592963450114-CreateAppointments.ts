@@ -31,7 +31,7 @@ export default class CreateAppointments1592963450114
           },
           {
             name: 'updated_at',
-            type: 'varchar',
+            type: 'timestamp',
             default: 'now()',
           },
         ],
