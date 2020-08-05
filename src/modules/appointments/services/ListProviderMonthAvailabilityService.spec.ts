@@ -15,6 +15,10 @@ describe('ListProviderMonthAvailability', () => {
   });
 
   it('should be able to list the month availability from provider', async () => {
+    jest.spyOn(Date, 'now').mockImplementation(() => {
+      return new Date(2020, 3, 15, 12).getTime();
+    });
+
     let day20Appointments: Promise<Appointment>[] = [];
 
     const hourStart = 8;
